@@ -8,15 +8,14 @@ There are two conditions to make the decision:
 
 If both conditions are satisfied, you can deploy your code!
 
-The expected response has the following format:
-
+An expected response will look like the following one:
 ```json
 {
-  "deploy": bool, // if the code can be deployed
-  "temp_condition": bool, // if the temperature condition is satisfied
-  "wind_condition": bool, // if the wind speed condition is satisfied
-  "error": string, // empty string if no errors happened during execution
-  "cutie_fox": string // link to a fox image for the developer enjoyment
+  "deploy": true, // if the code can be deployed
+  "current_temp": 20, // currrent temperature in degrees celsius
+  "current_wind": 15, // current wind speed in km/h
+  "error": "", // empty string if no errors happened during execution
+  "cutie_fox": "http://...jpg" // link to a fox image for the developer enjoyment
 }
 ```
 
@@ -29,7 +28,7 @@ go build -v # To compile the code
 .\main.exe # To start your server in Windows
 ```
 
-### Documentation
+## Documentation
 
 All the functions are properly documented. You just need to take a look on the files.
 
@@ -41,7 +40,7 @@ godoc -hhtp=:6060
 
 The documentation will be available in this [link](http://localhost:6060/pkg/main/server/).
 
-### Tests
+## Tests
 
 Unit tests have been added as well. For this service I have added them for the function that checks the weather condition and returns if the code can be deployed or not.
 
