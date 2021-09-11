@@ -9,7 +9,7 @@ There are two conditions to make the decision:
 If both conditions are satisfied, you can deploy your code!
 
 An expected response will look like the following one:
-```json
+```jsonc
 {
   "deploy": true, // if the code can be deployed
   "current_temp": 20, // currrent temperature in degrees celsius
